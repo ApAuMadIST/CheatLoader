@@ -9,6 +9,5 @@ public class Client {
 		
 	public void init() {
 		this.chatutils = new ChatUtils();
-		
 	}
 }

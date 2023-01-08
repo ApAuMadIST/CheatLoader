@@ -10,6 +10,8 @@ import java.util.Random;
 
 import org.lwjgl.opengl.GL11;
 
+import io.apaumadist.haxloader.Client;
+
 public class GuiMainMenu extends GuiScreen {
 	private static final Random rand = new Random();
 	private float updateCounter = 0.0F;
@@ -115,7 +117,7 @@ public class GuiMainMenu extends GuiScreen {
 		GL11.glScalef(f8, f8, f8);
 		this.drawCenteredString(this.fontRenderer, this.splashText, 0, -8, 16776960);
 		GL11.glPopMatrix();
-		this.drawString(this.fontRenderer, "Minecraft Beta 1.7.3", 2, 2, 5263440);
+		this.drawString(this.fontRenderer, ModLoader.VERSION+", HaxLoader "+Client.VERSION, 2, 2, 5263440);
 		String string9 = "Copyright Mojang AB. Do not distribute.";
 		this.drawString(this.fontRenderer, string9, this.width - this.fontRenderer.getStringWidth(string9) - 2, this.height - 10, 0xFFFFFF);
 		super.drawScreen(i1, i2, f3);
